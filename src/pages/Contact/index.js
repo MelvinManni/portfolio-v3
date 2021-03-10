@@ -64,7 +64,7 @@ export default function Contact() {
         </a>
       </Section>
 
-      <ContactComponent title="Drop a Message" header="Start a Conversation " />
+      <ContactComponent title="Drop a Message" header="Start a Conversation" />
     </>
   );
 }
