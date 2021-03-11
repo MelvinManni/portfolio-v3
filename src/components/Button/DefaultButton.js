@@ -65,7 +65,7 @@ export default function DefaultButton({ children, loading, reverse, disabled, ..
       <Btn disabled={loading === true ? loading : disabled} reverse={reverse} {...rest}>
         {children}
         <Icon reverse={reverse}>
-          {loading === true ? <img src={load} alt="" /> : <FaLongArrowAltRight color={reverse ? colors.PRIMARY : colors.BLACK} size={24} />}
+          {loading === true ? <img src={load} width="30px" alt="" /> : <FaLongArrowAltRight color={reverse ? colors.PRIMARY : colors.BLACK} size={24} />}
         </Icon>
       </Btn>
       <Shadow />
