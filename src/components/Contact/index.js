@@ -32,7 +32,32 @@ export const ButtonWrapper = styled.div`
   justify-content: flex-end;
 `;
 
-export default function ContactComponent({title, header}) {
+export default function ContactComponent({ title, header }) {
+  const [state, setState] = React.useState({
+    Name: "",
+    Email: "",
+    Phone: "",
+    Message: "",
+  });
+  const [loading, setLoading] = React.useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await fetch("https://formspree.io/f/xwkwglde", { method: "POST", body: state });
+      setLoading(false);
+    } catch (e) {
+      console.log(e);
+      setLoading(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setState((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
     <Wrapper bg="black">
       <GridContainer>
@@ -46,13 +71,15 @@ export default function ContactComponent({title, header}) {
           <Text mb={80} color="grey">
             Leave a message! I will reply within the day
           </Text>
-          <form>
-            <InputField placeholder="Full name" />
-            <InputField placeholder="Email" />
-            <InputField placeholder="Phone Number" />
-            <TextArea rows={9} placeholder="Message" />
+          <form onSubmit={handleSubmit}>
+            <InputField name="Name" value={state.Name} onChange={handleChange} placeholder="Full name" />
+            <InputField name="Email" value={state.Email} onChange={handleChange} placeholder="Email" />
+            <InputField name="Phone" value={state.Phone} onChange={handleChange} placeholder="Phone Number" />
+            <TextArea name="Message" value={state.Message} onChange={handleChange} rows={9} placeholder="Message" />
             <ButtonWrapper>
-              <Button reverse>Let’s Chat</Button>
+              <Button loading={loading} reverse>
+                Let’s Chat
+              </Button>
             </ButtonWrapper>
           </form>
         </GridCol>

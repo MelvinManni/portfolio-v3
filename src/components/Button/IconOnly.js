@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const Shadow = styled.div`
   content: "";
   position: absolute;
-  height: 50px;
+  height: 45px;
   width: 100%;
   background-image: url(${btnDot});
   background-position: center;
@@ -26,9 +26,9 @@ const Shadow = styled.div`
 const Btn = styled.button`
   border-radius: ${(props) => (props.custom !== undefined ? "10px" : "50%")};
   background: ${(props) => (props.custom === undefined ? colors.PRIMARY : colors.WHITE)};
-  width: 50px;
-  height: 50px;
-  padding: 10px;
+  width: 45px;
+  height: 45px;
+  padding: ${(props) => (props.custom ? "2px" : "10px")};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,11 +37,17 @@ const Btn = styled.button`
   border: 0;
 `;
 
-export default function IconButton({ children, custom, ...rest }) {
+export default function IconButton({ children, custom, link, ...rest }) {
   return (
     <Wrapper>
       <Btn custom={custom} {...rest}>
-        {custom === undefined ? <FaLongArrowAltRight color={colors.BLACK} size={24} /> : children}
+        {custom === undefined ? (
+          <a href={link} target="__blank">
+            <FaLongArrowAltRight color={colors.BLACK} size={24} />
+          </a>
+        ) : (
+          children
+        )}
       </Btn>
       {custom === undefined && <Shadow />}
     </Wrapper>

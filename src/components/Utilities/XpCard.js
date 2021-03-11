@@ -8,6 +8,10 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  margin-bottom: 100px;
+  :last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Circle = styled.div`
@@ -71,6 +75,7 @@ const Circle = styled.div`
     margin-right: 10px;
     &::after {
       width: 2px;
+
       height: 100%;
       bottom: -100%;
       right: unset;
