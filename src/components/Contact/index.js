@@ -9,6 +9,7 @@ import Button from "../Button";
 import { Hide } from "../../assets/jss/responsive";
 import hand from "../../assets/images/hand.svg";
 import { InputField, TextArea } from "../Input";
+import Alert from "../Alert";
 
 const Wrapper = styled(Section)`
   background-image: url(${blob});
@@ -39,17 +40,38 @@ export default function ContactComponent({ title, header }) {
     Phone: "",
     Message: "",
   });
+  const [modal, setModal] = React.useState(false);
+  const [alert, setAlert] = React.useState({
+    message: "",
+    type: "",
+  });
   const [loading, setLoading] = React.useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
-      await fetch("https://formspree.io/f/xwkwglde", { method: "POST", body: state });
+      await fetch("https://formspree.io/f/xwkwglde", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: JSON.stringify(state),
+      });
       setLoading(false);
+      setAlert({
+        message: "Message succesfully sent. I will be responding within the next 24 hours :D.",
+        type: "success",
+      });
+      setModal(true);
     } catch (e) {
       console.log(e);
       setLoading(false);
+      setAlert({
+        message: "Opps! \n An Error occured while trying to send message, please try again.",
+        type: "error",
+      });
+      setModal(true);
     }
   };
 
@@ -72,10 +94,10 @@ export default function ContactComponent({ title, header }) {
             Leave a message! I will reply within the day
           </Text>
           <form onSubmit={handleSubmit}>
-            <InputField name="Name" value={state.Name} onChange={handleChange} placeholder="Full name" />
-            <InputField name="Email" value={state.Email} onChange={handleChange} placeholder="Email" />
-            <InputField name="Phone" value={state.Phone} onChange={handleChange} placeholder="Phone Number" />
-            <TextArea name="Message" value={state.Message} onChange={handleChange} rows={9} placeholder="Message" />
+            <InputField required type="text" name="Name" value={state.Name} onChange={handleChange} placeholder="Full name" />
+            <InputField required type="email" name="Email" value={state.Email} onChange={handleChange} placeholder="Email" />
+            <InputField name="Phone" minLength={11} maxLength={14} type="number" value={state.Phone} onChange={handleChange} placeholder="Phone Number" />
+            <TextArea required type="text" name="Message" value={state.Message} onChange={handleChange} rows={9} placeholder="Message" />
             <ButtonWrapper>
               <Button loading={loading} reverse>
                 Let’s Chat
@@ -89,6 +111,9 @@ export default function ContactComponent({ title, header }) {
           <Img src={hand} alt="desk and person" />
         </Hide>
       </ImgWrapper>
+
+      {/* Alert Modal */}
+      <Alert open={modal} setOpen={setModal} type={alert.type} message={alert.message} />
     </Wrapper>
   );
 }

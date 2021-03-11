@@ -2,6 +2,8 @@ const colors = {
   PRIMARY: "#6FFFE9",
   PRIMARY100: "rgba(111, 255, 233, 0.3)",
   SECONDARY: "#5BC0BE",
+  ERROR: " #FF3333",
+  SUCCESS: "#42ba96",
   TETIARY: "#3A506B",
   DARKBLUE: "#1C2541",
   BLACK: "#0B132B",
