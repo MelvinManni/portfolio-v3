@@ -30,14 +30,14 @@ export const projects = [
 
   {
     title: "Kyleads Compressor",
-    description: "Conversion of UI design to code for Kyleads Compressor, a SaaS that helpsyou compress image size and convert image type",
+    description: "Conversion of UI design to code for Kyleads Compressor, a SaaS that enables you compress image size and convert image type",
     link: "https://www.kyleads.com/compress-image/",
     img: kyleads,
   },
 
   {
     title: "Cool Collage",
-    description: "A SaaS image manipulator and collage maker, mix-match those amazing memories captured with this software, built using fabric.js library",
+    description: "A SaaS image manipulator and collage maker, mix-match those amazing memories with this software, built using fabric.js library",
     link: "https://cool-collage.netlify.app/",
     img: coolCollage,
   },
