@@ -1,5 +1,5 @@
-aimport React from "react";
-ddedimport styled from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import Section from "../../assets/jss/section";
 import { StyledTitle, Title } from "../../components/Typography";
 import XpCard from "../../components/Utilities/XpCard";
