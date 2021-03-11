@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -82,4 +86,23 @@ body {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+button:active{
+  box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.2);
+  animation: 0.7s pulse 1 forwards;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }

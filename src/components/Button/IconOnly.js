@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   position: relative;
   width: max-content;
   margin: 0 13px 13px 0;
-`;
+  `;
 
 const Shadow = styled.div`
   content: "";
@@ -21,7 +21,7 @@ const Shadow = styled.div`
   bottom: -6px;
   right: -6px;
   z-index: 0;
-`;
+  `;
 
 const Btn = styled.button`
   border-radius: ${(props) => (props.custom !== undefined ? "10px" : "50%")};
@@ -35,6 +35,7 @@ const Btn = styled.button`
   position: relative;
   z-index: 1;
   border: 0;
+  cursor: pointer;
 `;
 
 export default function IconButton({ children, custom, link, ...rest }) {

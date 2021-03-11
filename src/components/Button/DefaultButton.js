@@ -40,6 +40,7 @@ const Btn = styled.button`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  cursor: pointer;
   z-index: 1;
 `;
 
