@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import colors from "../../assets/jss/colors";
 import btnDot from "../../assets/images/button-grid.svg";
+import load from "../../assets/images/spinner.svg";
 
 const Wrapper = styled.div`
   position: relative;
@@ -58,13 +59,13 @@ const Icon = styled.div`
   right: -1px;
 `;
 
-export default function DefaultButton({ children, reverse, ...rest }) {
+export default function DefaultButton({ children, loading, reverse, disabled, ...rest }) {
   return (
     <Wrapper>
-      <Btn reverse={reverse} {...rest}>
+      <Btn disabled={loading === true ? loading : disabled} reverse={reverse} {...rest}>
         {children}
         <Icon reverse={reverse}>
-          <FaLongArrowAltRight color={reverse ? colors.PRIMARY : colors.BLACK} size={24} />
+          {loading === true ? <img src={load} alt="" /> : <FaLongArrowAltRight color={reverse ? colors.PRIMARY : colors.BLACK} size={24} />}
         </Icon>
       </Btn>
       <Shadow />

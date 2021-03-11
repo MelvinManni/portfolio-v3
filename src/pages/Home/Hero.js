@@ -9,6 +9,7 @@ import { GridCol, GridContainer } from "../../assets/jss/Flexgrid";
 import Button from "../../components/Button";
 import { Hide } from "../../assets/jss/responsive";
 import deskImg from "../../assets/images/desk.png";
+import { useHistory } from "react-router-dom";
 
 const Wrapper = styled(Section)`
   background-image: url(${blob});
@@ -54,6 +55,7 @@ const Img = styled.img`
 `;
 
 export default function Hero() {
+  const history = useHistory();
   return (
     <Wrapper padding="lg">
       <GridContainer>
@@ -68,7 +70,7 @@ export default function Hero() {
             </Text>
           </GridCol>
 
-          <Button>Let’s Chat</Button>
+          <Button onClick={() => history.push("/contact")}>Let’s Chat</Button>
         </LeftGrid>
         <GridCol lg={6}>
           <Hide md>
