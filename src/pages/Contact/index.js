@@ -32,22 +32,22 @@ export default function Contact() {
         </Text>
 
         <Row>
-          <Socials>
+          <Socials href="https://www.github.com/MelvinManni" target="__blank" >
             <Text color="GitHub" weight={600} size={18} lineHeight={19} mb={35}>
               GitHub
             </Text>
           </Socials>
-          <Socials>
+          <Socials href="https://www.twitter.com/Melvin_manni" target="__blank" >
             <Text color="Twitter" weight={600} size={18} lineHeight={19} mb={35}>
               Twitter
             </Text>
           </Socials>
-          <Socials>
+          <Socials href="https://www.linkedin.com/mwlite/in/melvin-kosisochukwu-9557a9184" target="__blank" >
             <Text color="LinkedIn" weight={600} size={18} lineHeight={19} mb={35}>
               LinkedIn
             </Text>
           </Socials>
-          <Socials>
+          <Socials href="https://www.facebook.com/melvin.nnamani" target="__blank" >
             <Text color="Facebook" weight={600} size={18} lineHeight={19} mb={35}>
               Facebook
             </Text>
