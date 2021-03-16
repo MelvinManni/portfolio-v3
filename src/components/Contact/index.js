@@ -63,7 +63,9 @@ export default function ContactComponent({ title, header }) {
         message: "Message succesfully sent. I will be responding within the next 24 hours :D.",
         type: "success",
       });
+      e.target.reset();
       setModal(true);
+
     } catch (e) {
       console.log(e);
       setLoading(false);
