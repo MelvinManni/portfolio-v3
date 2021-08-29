@@ -16,7 +16,7 @@ export const projects = [
     link: "https://orangegrove.finance/",
   },
   {
-    title: "Bellefu",
+    title: "dec-fundMe",
     description:
       "A new decentralized way for requesting funding from friends and the public. dec-fundMe is a decentralized application that allows you request for donation from friends, it is currently deployed on a test network(Kovan)",
     img: decfundme,
