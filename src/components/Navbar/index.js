@@ -113,7 +113,7 @@ const Toggle = styled.button`
 const route = [
   { name: "Home", path: "/" },
   { name: "Contact", path: "/contact" },
-  { name: "Experience", path: "/experience" },
+  // { name: "Experience", path: "/experience" },
 ];
 
 export default function Navbar(props) {
@@ -127,7 +127,7 @@ export default function Navbar(props) {
         <Logo to="/">
           <LogoImage src={logo} />
           <LogoText color="logo" size="18" height="19.08">
-            Frontend <br />
+            Software <br />
             Developer
           </LogoText>
         </Logo>

@@ -57,9 +57,9 @@ export default function Contact() {
         <Text color="black" weight={600} size={18} lineHeight={19} mb={20}>
           Get official and shoot me a Mail
         </Text>
-        <a href="mailto:melvinmanni@gmail.com">
+        <a href="mailto:melvinnnamanni@gmail.com">
           <Text color="email" weight={600} size={18} lineHeight={19}>
-            melvinmanni@gmail.com
+            melvinnnamanni@gmail.com
           </Text>
         </a>
       </Section>

@@ -4,8 +4,24 @@ import kyleads from "../assets/images/projects/kyleads.png";
 import coolCollage from "../assets/images/projects/cool-collage.png";
 import covid from "../assets/images/projects/covid.png";
 import cgpa from "../assets/images/projects/cgpa.png";
+import decfundme from "../assets/images/projects/dec-fundMe.png";
+import orangegrove from "../assets/images/projects/orangegrove.png";
 
 export const projects = [
+  {
+    title: "Orange Grove",
+    description:
+      "Orange Grove is a DeFi(Decentralized application) Application for staking and farming crypto currencies",
+    img: orangegrove,
+    link: "https://orangegrove.finance/",
+  },
+  {
+    title: "Bellefu",
+    description:
+      "A new decentralized way for requesting funding from friends and the public. dec-fundMe is a decentralized application that allows you request for donation from friends, it is currently deployed on a test network(Kovan)",
+    img: decfundme,
+    link: "https://dec-fundme.netlify.app/",
+  },
   {
     title: "Bellefu",
     description:
