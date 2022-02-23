@@ -11,9 +11,9 @@ export const projects = [
   {
     title: "Orange Grove",
     description:
-      "Orange Grove is a DeFi(Decentralized application) Application for staking and farming crypto currencies",
+      "Orange Grove is a DeFi(Decentralized application) Application for staking and farming crypto currencies &#10;&#13; Test Version",
     img: orangegrove,
-    link: "https://orangegrove.finance/",
+    link: "https://test-organgegrove.netlify.app/",
   },
   {
     title: "dec-fundMe",
