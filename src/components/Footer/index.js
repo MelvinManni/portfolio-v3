@@ -10,6 +10,8 @@ const Wrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
+  border-top: 0.4px solid #eee;
   @media all and (max-width: 534px) {
     padding: 60px 25px;
     flex-direction: column;

@@ -39,8 +39,7 @@ export default function WhoAmI() {
         <StyledTitle mb={4}>Who am I?</StyledTitle>
         <Title mb={40}>A bit about me</Title>
         <Text size={18} lineHeight={47}>
-          I am Nnamani Melvin Kosisochukwu, a software developer, technical writer, blockchain enthusiast, student and gamer😅. I am a student in the University
-          of Port Harcourt, Rivers State Nigeria. I major in Computer Science. I started my programming journey in 2018 but before then i have dabbled a little
+          I am Nnamani Melvin Kosisochukwu, a software developer, technical writer, blockchain enthusiast, student and gamer😅. I started my programming journey in 2018 but before then i have dabbled a little
           and ended up pulling back. Programming is exactly what you think it is... writing beautiful codes that work and trying to get rid of as much bugs as
           possible while being powered by coffee.
         </Text>

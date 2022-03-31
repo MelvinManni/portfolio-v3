@@ -7,7 +7,6 @@ import { Text } from "../Typography";
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
 import { slideDown, slideUp } from "../../assets/jss/animations";
 
-
 const Nav = styled.nav`
   width: 100%;
   padding: 30px 100px;
@@ -113,7 +112,7 @@ const Toggle = styled.button`
 const route = [
   { name: "Home", path: "/" },
   { name: "Contact", path: "/contact" },
-  // { name: "Experience", path: "/experience" },
+  { name: "Experience", path: "/experience" },
 ];
 
 export default function Navbar(props) {
@@ -122,7 +121,7 @@ export default function Navbar(props) {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <header>
+    <header style={{ borderBottom: " 0.4px solid #eee" }}>
       <Nav>
         <Logo to="/">
           <LogoImage src={logo} />

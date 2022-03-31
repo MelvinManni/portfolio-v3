@@ -5,6 +5,7 @@ const GridContainer = styled.div`
   display: -webkit-flex;
   display: -ms-flexbox;
   padding: 15px 0;
+  gap: ${(props) => (props.gap ? props.gap : "unset")};
   display: flex;
   flex-wrap: ${(props) => (props.nowrap ? "no-wrap" : "wrap")};
   justify-content: ${(props) => (props.justify ? props.justify : "unset")};

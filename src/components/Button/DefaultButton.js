@@ -59,14 +59,16 @@ const Icon = styled.div`
   right: -1px;
 `;
 
-export default function DefaultButton({ children, loading, reverse, disabled, ...rest }) {
+export default function DefaultButton({ children, loading, reverse, disabled, noIcon, fullWidth, ...rest }) {
   return (
-    <Wrapper>
+    <Wrapper style={{ width: fullWidth ? "100%" : "max-content" }}>
       <Btn disabled={loading === true ? loading : disabled} reverse={reverse} {...rest}>
         {children}
-        <Icon reverse={reverse}>
-          {loading === true ? <img src={load} width="30px" alt="" /> : <FaLongArrowAltRight color={reverse ? colors.PRIMARY : colors.BLACK} size={24} />}
-        </Icon>
+        {!noIcon && (
+          <Icon reverse={reverse}>
+            {loading === true ? <img src={load} width="30px" alt="" /> : <FaLongArrowAltRight color={reverse ? colors.PRIMARY : colors.BLACK} size={24} />}
+          </Icon>
+        )}
       </Btn>
       <Shadow />
     </Wrapper>

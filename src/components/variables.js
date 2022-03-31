@@ -39,7 +39,7 @@ export const projects = [
   {
     title: "Todo-Et",
     description: "A simple severless todo list web app built with Google Firebase and Reactjs, to help you keep track of your activities 😁",
-    github: "https://github.com/MelvinManni/todoet.git",
+    github: "https://githu b.com/MelvinManni/todoet.git",
     link: "https://todoet.netlify.app/",
     img: todoet,
   },

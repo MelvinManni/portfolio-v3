@@ -3,6 +3,27 @@ import styled from "styled-components";
 import Section from "../../assets/jss/section";
 import ContactComponent from "../../components/Contact";
 import { StyledTitle, Text, Title } from "../../components/Typography";
+import blob from "../../assets/images/experience-blob.svg";
+
+const Wrapper = styled(Section)`
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    background-image: url(${blob});
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-bottom: 0;
+  }
+
+  @media all and (max-width: 993px) {
+    &::before {
+      display: none;
+    }
+  }
+`;
 
 const Row = styled.div`
   display: flex;
@@ -21,7 +42,7 @@ const Socials = styled.a`
 export default function Contact() {
   return (
     <>
-      <Section padding="lg">
+      <Wrapper padding="lg">
         <StyledTitle>Say Hello</StyledTitle>
         <Title mb={95} size="md">
           Contact
@@ -62,8 +83,8 @@ export default function Contact() {
             melvinnnamanni@gmail.com
           </Text>
         </a>
-      </Section>
 
+      </Wrapper>
       <ContactComponent title="Drop a Message" header="Start a Conversation" />
     </>
   );

@@ -11,7 +11,7 @@ import hand from "../../assets/images/hand.svg";
 import { InputField, TextArea } from "../Input";
 import Alert from "../Alert";
 
-const Wrapper = styled(Section)`
+export const Wrapper = styled(Section)`
   background-image: url(${blob});
   background-repeat: no-repeat;
   background-position: right center;
