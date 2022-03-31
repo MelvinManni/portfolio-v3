@@ -16,6 +16,7 @@ export default function AddProject() {
     img: "",
     github: "",
     description: "",
+    passcode: "",
   });
   const [modal, setModal] = React.useState(false);
   const [alert, setAlert] = React.useState({
@@ -48,7 +49,7 @@ export default function AddProject() {
           img: "",
           github: "",
           description: "",
-        })
+        });
       }, 1000);
     }
   };
@@ -78,6 +79,7 @@ export default function AddProject() {
             <InputField type="text" name="link" value={state.link} onChange={handleChange} placeholder="Live Link" />
             <InputField type="text" name="github" value={state.github} onChange={handleChange} placeholder="Github Link" />
             <TextArea type="text" name="description" value={state.description} onChange={handleChange} rows={9} placeholder="Description" />
+            <InputField required type="text" name="passcode" value={state.passcode} onChange={handleChange} placeholder="PASSCODE" />
             <ButtonWrapper>
               <Button loading={loading} reverse>
                 Add Project{" "}

@@ -8,7 +8,6 @@ import colors from "../../assets/jss/colors";
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  margin-bottom: 20px;
   box-shadow: 0px 0px 9px 1px rgba(127, 131, 140, 0.16);
   border-radius: 8px;
   position: relative;
