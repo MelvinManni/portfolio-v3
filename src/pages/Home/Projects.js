@@ -3,6 +3,7 @@ import React from "react";
 import { GridCol, GridContainer } from "../../assets/jss/Flexgrid";
 import Section from "../../assets/jss/section";
 import Alert from "../../components/Alert";
+import Spinner from "../../components/Spinner";
 import { StyledTitle, Title } from "../../components/Typography";
 import ProjectCard from "../../components/Utilities/ProjectCard";
 import { projects as projs } from "../../components/variables";
@@ -48,7 +49,9 @@ export default function Projects() {
       <Title mb={100}>Case Studies</Title>
       <GridContainer justify="space-between">
         {loading ? (
-          <GridContainer justify="center"></GridContainer>
+          <GridContainer style={{ width: "100%" }} justify="center">
+            <Spinner width="80px" height="80px" />
+          </GridContainer>
         ) : projects.length > 0 ? (
           projects.map((item, indx) => (
             <GridCol style={{ marginBottom: 20 }} key={indx.toString()} col={12} md={6} lg={5}>

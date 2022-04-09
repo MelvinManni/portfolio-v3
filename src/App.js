@@ -1,3 +1,4 @@
+import { Redirect } from "react-router-dom";
 import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
 import styledComponents from "styled-components";
 import Footer from "./components/Footer";
@@ -32,6 +33,7 @@ function App() {
               <Route exact path="/admin/project" component={Admin} />
               <Route exact path="/admin/project/add" component={AddProject} />
               <Route exact path="/admin/project/edit/:id" component={EditProject} />
+              <Redirect path="/admin" to="/admin/project" />
             </Switch>
           </Main>
         </div>

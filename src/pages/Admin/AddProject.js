@@ -29,6 +29,7 @@ export default function AddProject() {
     e.preventDefault();
     setLoading(true);
     try {
+      console.log(state);
       const {
         data: { message },
       } = await axios.post(API_ROUTE + "/project", state);
@@ -49,6 +50,7 @@ export default function AddProject() {
           img: "",
           github: "",
           description: "",
+        passcode: ""
         });
       }, 1000);
     }
