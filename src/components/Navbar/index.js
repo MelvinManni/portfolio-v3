@@ -112,7 +112,7 @@ const Toggle = styled.button`
 const route = [
   { name: "Home", path: "/" },
   { name: "Contact", path: "/contact" },
-  { name: "Experience", path: "/experience" },
+  // { name: "Experience", path: "/experience" },
 ];
 
 export default function Navbar(props) {
