@@ -7,6 +7,7 @@ import BacktoTop from "./components/Utilities/BacktoTop";
 import Admin from "./pages/Admin";
 import AddProject from "./pages/Admin/AddProject";
 import EditProject from "./pages/Admin/EditProject";
+import Articles from "./pages/Articles";
 import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
 import Home from "./pages/Home";
@@ -28,6 +29,7 @@ function App() {
           <Main>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/articles" component={Articles} />
               <Route exact path="/experience" component={Experience} />
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/admin/project" component={Admin} />
