@@ -39,9 +39,10 @@ export default function WhoAmI() {
         <StyledTitle mb={4}>Who am I?</StyledTitle>
         <Title mb={40}>A bit about me</Title>
         <Text size={18} lineHeight={47}>
-          I am Nnamani Melvin Kosisochukwu, a software developer, technical writer, blockchain enthusiast, student and gamer😅. I started my programming journey in 2018 but before then i have dabbled a little
-          and ended up pulling back. Programming is exactly what you think it is... writing beautiful codes that work and trying to get rid of as much bugs as
-          possible while being powered by coffee.
+          I am a software developer, technical writer, blockchain enthusiast, and a passionate student of the world. With a love for gaming to round out my
+          interests, I am someone who lives life to the fullest. My journey as a programmer began in 2018, and since then, I have been on an exciting roller
+          coaster ride, crafting elegant and efficient code that is both functional and visually appealing. In pursuit of excellence, I strive to eliminate as
+          many bugs as possible, all while being fueled by the invigorating power of coffee.
         </Text>
       </GridCol>
       <Blob src={blob} alt="blob" />
@@ -56,9 +57,9 @@ export default function WhoAmI() {
           <VectorImg src={vector3} />
         </Bounce>
       </Hide>
-        <Bounce right={80} bottom={5}>
-          <VectorImg src={vector2} />
-        </Bounce>
+      <Bounce right={80} bottom={5}>
+        <VectorImg src={vector2} />
+      </Bounce>
     </Section>
   );
 }

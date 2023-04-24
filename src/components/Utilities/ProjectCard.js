@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 const Img = styled.img`
   width: 100%;
   border-radius: 8px 8px 0 0;
+  border-bottom: 0.5px solid ${colors.TETIARY};
 
 `;
 
@@ -23,14 +24,14 @@ const Flex = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 50px;
+  margin-top: 20px;
 `;
 
 export default function ProjectCard({ img, title, description, github, link }) {
   return (
     <Wrapper>
       <Img src={img ? img : ""} />
-      <div style={{ padding: "40px 20px" }}>
+      <div style={{ padding: "40px 20px 10px" }}>
         <Title mb={20} size="sm">
           {title}
         </Title>

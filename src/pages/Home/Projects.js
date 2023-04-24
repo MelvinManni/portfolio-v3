@@ -47,20 +47,20 @@ export default function Projects() {
     <Section padding="lg">
       <StyledTitle mb={5}>What I’ve done</StyledTitle>
       <Title mb={100}>Case Studies</Title>
-      <GridContainer justify="space-between">
+      <GridContainer>
         {loading ? (
           <GridContainer style={{ width: "100%" }} justify="center">
             <Spinner width="80px" height="80px" />
           </GridContainer>
         ) : projects.length > 0 ? (
           projects.map((item, indx) => (
-            <GridCol style={{ marginBottom: 20 }} key={indx.toString()} col={12} md={6} lg={3}>
+            <GridCol style={{ marginBottom: 20 }} key={indx.toString()} col={12} md={6} lg={4}>
               <ProjectCard img={item.img} title={item.title} github={item.github} link={item.link} description={item.description} />
             </GridCol>
           ))
         ) : (
           projs.map((item, indx) => (
-            <GridCol style={{ marginBottom: 20 }} key={indx.toString()} col={12} md={6} lg={5}>
+            <GridCol style={{ marginBottom: 20 }} key={indx.toString()} col={12} md={6} lg={4}>
               <ProjectCard img={item.img} title={item.title} github={item.github} link={item.link} description={item.description} />
             </GridCol>
           ))

@@ -5,6 +5,7 @@ import { StyledTitle, Title } from "../../components/Typography";
 import XpCard from "../../components/Utilities/XpCard";
 import { experience } from "../../components/variables";
 import blob from "../../assets/images/experience-blob.svg";
+import { GridCol } from "../../assets/jss/Flexgrid";
 
 const Wrapper = styled(Section)`
   &::before {
@@ -14,6 +15,7 @@ const Wrapper = styled(Section)`
     width: 100%;
     height: 100%;
     background-image: url(${blob});
+    opacity: 0.3;
     background-repeat: no-repeat;
     background-position: right center;
     padding-bottom: 0;
@@ -32,13 +34,15 @@ export default function Experience() {
   return (
     <Wrapper padding="lg">
       <StyledTitle mb={20}>Journey so far</StyledTitle>
-      <Title mb={130} size="md">
+      <Title mb={80} size="md">
         My Experience
       </Title>
 
-      {experience.map((item, indx) => (
-        <XpCard key={indx.toString()} company={item.company} position={item.title} description={item.description} from={item.from} to={item.to} />
-      ))}
+      <GridCol md={12} lg={10} xl={8}>
+        {experience.map((item, indx) => (
+          <XpCard key={indx.toString()} company={item.company} position={item.title} description={item.description} from={item.from} to={item.to} />
+        ))}
+      </GridCol>
     </Wrapper>
   );
 }

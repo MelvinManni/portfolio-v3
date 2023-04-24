@@ -4,7 +4,7 @@ import colors from "../../assets/jss/colors";
 
 const TextStyle = styled.h2`
   font-family: "Sora";
-  font-style: normal;
+  font-style: ${(props)=> props.fontStyle || "normal"};
   position: relative;
   z-index: 1;
   font-weight: ${(props) => (props.weight ? props.weight : "normal")};

@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-bottom: 100px;
+  margin-bottom:55px;
   :last-child {
     margin-bottom: 0;
   }
@@ -97,7 +97,7 @@ const Subtitle = styled(Text)`
 `;
 
 const Description = styled(Text)`
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 `;
 
 export default function XpCard({ company, position, description, from, to }) {
@@ -114,7 +114,7 @@ export default function XpCard({ company, position, description, from, to }) {
           {description}
         </Description>
 
-        <Text color="xp" size={13} lineHeight={16}>
+        <Text fontStyle="italic" color="xp" size={13} lineHeight={16}>
           {from}-{to === undefined || to === "" ? "Present" : to}
         </Text>
       </div>
