@@ -54,13 +54,13 @@ export default function Projects() {
           </GridContainer>
         ) : projects.length > 0 ? (
           projects.map((item, indx) => (
-            <GridCol style={{ marginBottom: 20 }} key={indx.toString()} col={12} md={6} lg={5}>
+            <GridCol style={{ marginBottom: 20 }} key={indx.toString()} col={12} md={6} lg={3}>
               <ProjectCard img={item.img} title={item.title} github={item.github} link={item.link} description={item.description} />
             </GridCol>
           ))
         ) : (
           projs.map((item, indx) => (
-            <GridCol key={indx.toString()} col={12} md={6} lg={5}>
+            <GridCol style={{ marginBottom: 20 }} key={indx.toString()} col={12} md={6} lg={5}>
               <ProjectCard img={item.img} title={item.title} github={item.github} link={item.link} description={item.description} />
             </GridCol>
           ))
