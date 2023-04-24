@@ -11,13 +11,18 @@ const Wrapper = styled.div`
   box-shadow: 0px 0px 9px 1px rgba(127, 131, 140, 0.16);
   border-radius: 8px;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    box-shadow: 0px 0px 9px 1px rgba(127, 131, 140, 0.3);
+  }
 `;
 
 const Img = styled.img`
   width: 100%;
   border-radius: 8px 8px 0 0;
   border-bottom: 0.5px solid ${colors.TETIARY};
-
 `;
 
 const Flex = styled.div`
@@ -27,11 +32,22 @@ const Flex = styled.div`
   margin-top: 20px;
 `;
 
+const ContentWrapper = styled.div`
+  padding: 40px 20px 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: stretch;
+  > div {
+    margin-top: auto;
+  }
+`;
+
 export default function ProjectCard({ img, title, description, github, link }) {
   return (
     <Wrapper>
       <Img src={img ? img : ""} />
-      <div style={{ padding: "40px 20px 10px" }}>
+      <ContentWrapper style={{ padding: "40px 20px 10px" }}>
         <Title mb={20} size="sm">
           {title}
         </Title>
@@ -39,6 +55,7 @@ export default function ProjectCard({ img, title, description, github, link }) {
           {description}
         </Text>
 
+        <div>
         {(github || link) && (
           <Flex>
             {github && (
@@ -51,7 +68,8 @@ export default function ProjectCard({ img, title, description, github, link }) {
             {link && <Button iconOnly link={link} />}
           </Flex>
         )}
-      </div>
+        </div>
+      </ContentWrapper>
     </Wrapper>
   );
 }
