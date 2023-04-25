@@ -18,7 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root{
+#root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -102,13 +102,17 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-button:active{
+button:active {
   box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.2);
   animation: 0.7s pulse 1 forwards;
+}
+
+.link-preview-component .Secondary.SiteDetails span:first-child {
+  display: none;
 }
 
 @keyframes pulse {
