@@ -9,7 +9,6 @@ import { GridCol, GridContainer } from "../../assets/jss/Flexgrid";
 import Button from "../../components/Button";
 import { Hide } from "../../assets/jss/responsive";
 import deskImg from "../../assets/images/desk.png";
-import { useHistory } from "react-router-dom";
 
 const Wrapper = styled(Section)`
   background-image: url(${blob});
@@ -55,7 +54,6 @@ const Img = styled.img`
 `;
 
 export default function Hero() {
-  const history = useHistory();
   return (
     <Wrapper padding="lg">
       <GridContainer>
@@ -66,11 +64,13 @@ export default function Hero() {
           </Title>
           <GridCol style={{ padding: 0 }} col={12} sm={10} md={8} lg={10} xl={8}>
             <Text mb={80} color="tetiary">
-              Software developer, student, lover of anime/video games and lover of JavaScript.
+              Software developer and technical writer with a zest for life and a passion for creating innovative solutions.
             </Text>
           </GridCol>
 
-          <Button onClick={() => history.push("/contact")}>Let’s Chat</Button>
+          <a href="https://docs.google.com/document/d/15j9Dl6eaYw-rCMOu7Umc4GJe6q3pbUs5ngJnBeoi2f4/edit?usp=sharing" target="_blank" rel="noreferrer">
+            <Button>Resume</Button>
+          </a>
         </LeftGrid>
         <GridCol lg={6}>
           <Hide md>

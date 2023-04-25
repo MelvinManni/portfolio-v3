@@ -38,7 +38,7 @@ const LogoText = styled(Text)`
 `;
 const LogoImage = styled.img`
   width: 107px;
-  margin-right: 50px;
+  margin-right: 30px;
   @media all and (max-width: 960px) {
     width: 90px;
     margin-right: 20px;
