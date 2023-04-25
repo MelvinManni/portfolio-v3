@@ -39,7 +39,7 @@ export default function Experience() {
       </Title>
 
       <GridCol md={12} lg={10} xl={8}>
-        {experience.map((item, indx) => (
+        {experience.reverse().map((item, indx) => (
           <XpCard key={indx.toString()} company={item.company} position={item.title} description={item.description} from={item.from} to={item.to} />
         ))}
       </GridCol>
