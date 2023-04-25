@@ -111,7 +111,7 @@ const Toggle = styled.button`
 
 const route = [
   { name: "Home", path: "/" },
-  { name: "Articles", path: "/articles" },
+  { name: "Blog", path: "/blog" },
   { name: "Experience", path: "/experience" },
   { name: "Contact", path: "/contact" },
 ];
