@@ -15,14 +15,14 @@ export const slideDown = () => keyframes`
     }
   
     to {
-      height: 180px;
+      height: 240px;
     }
 
 `;
 
 export const slideUp = () => keyframes`
     from {
-      height: 180px;
+      height: 240px;
     }
 
     to {
