@@ -120,5 +120,13 @@ export const experience = [
     title: "Frontend Engineer",
     description: "Integrated UI with Tezos wallet using Taquito and Beacon to enable data read and write from the Tezos blockchain.",
     from: "Sep 2021",
+    to: "Mar 2023",
+  },
+  {
+    company: "HireChain",
+    title: "Software Engineer",
+    description:
+      "I specialize in delivering professional software maintenance and troubleshooting services for HireChain. My expertise revolves around integrating scalable features using cutting-edge technologies to guarantee optimal performance.",
+    from: "Sep 2021",
   },
 ];
