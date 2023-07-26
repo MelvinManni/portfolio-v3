@@ -21,7 +21,8 @@ export default function Experience() {
     "https://code.pieces.app/blog/react-typescript-state-management-easy-peasy",
     "https://code.pieces.app/blog/building-a-fullstack-application-with-next-js-and-mongodb",
     "https://code.pieces.app/blog/serverside-rendering-with-express-and-ejs-templates",
-    "https://bejamas.io/discovery/serverless-database/supabase/"
+    "https://bejamas.io/discovery/serverless-database/supabase/",
+    "https://bejamas.io/discovery/static-site-generators/nextjs/
   ];
 
   const getLinkPreview = async (url) => {
