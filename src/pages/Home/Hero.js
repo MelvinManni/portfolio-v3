@@ -68,7 +68,7 @@ export default function Hero() {
             </Text>
           </GridCol>
 
-          <a href="https://docs.google.com/document/d/15j9Dl6eaYw-rCMOu7Umc4GJe6q3pbUs5ngJnBeoi2f4/edit?usp=sharing" target="_blank" rel="noreferrer">
+          <a href="https://drive.google.com/file/d/10MjnGNlziE-ny3zG2oWo7Rg8wrUXVsIS/view?usp=sharing" target="_blank" rel="noreferrer">
             <Button>Resume</Button>
           </a>
         </LeftGrid>
