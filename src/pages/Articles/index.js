@@ -26,7 +26,7 @@ export default function Experience() {
   ];
 
   const getLinkPreview = async (url) => {
-    const response = await axios(`https://link-preview-ijss.onrender.com/metadata?url=${url}`);
+    const response = await axios(`https://lp-express-production.up.railway.app/metadata?url=${url}`);
     console.log(response.data);
     return response.data;
   };
