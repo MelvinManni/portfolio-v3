@@ -1,2 +1,2 @@
-const API_ROUTE = "https://lp-express-production.up.railway.app/api/v1";
+const API_ROUTE = "https://portfolio-server-yp71.onrender.com/api/v1";
 export { API_ROUTE };
